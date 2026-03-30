@@ -1160,11 +1160,11 @@ export default function CoursesAdminPage() {
 
       {/* ---------- Form Modal (Create / Edit Course) ---------- */}
       {formOpen && editing && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 ">
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={closeForm} />
           <form
             onSubmit={submitForm}
-            className="relative z-50 w-full max-w-4xl bg-white rounded shadow-2xl overflow-hidden max-h-[90vh]"
+            className="relative z-50 w-full max-w-4xl bg-white rounded shadow-2xl mt-20 ml-50 overflow-hidden max-h-[90vh]"
           >
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
               <div className="flex items-center justify-between">
@@ -1190,6 +1190,7 @@ export default function CoursesAdminPage() {
                     <label className="block text-sm font-medium text-slate-700 mb-2">Course Title *</label>
                     <input
                       type="text"
+                      placeholder="Couse title..."
                       value={editing.title}
                       onChange={(e) => setEditing({ ...editing, title: e.target.value })}
                       className="w-full px-4 py-3 bg-white border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-slate-900"
@@ -1213,6 +1214,7 @@ export default function CoursesAdminPage() {
                   <label className="block text-sm font-medium text-slate-700 mb-2">Description</label>
                   <textarea
                     value={editing.description || ""}
+                    placeholder="Please fill atleast 10 words..."
                     onChange={(e) => setEditing({ ...editing, description: e.target.value })}
                     rows={3}
                     className="w-full px-4 py-3 bg-white border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition resize-none text-slate-900"
