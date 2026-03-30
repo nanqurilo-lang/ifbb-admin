@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+
 import {
   Users,
   Mail,
@@ -170,9 +171,9 @@ function UserModal({
       className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-0 sm:p-4"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="bg-white rounded sm:rounded w-full sm:max-w-2xl overflow-hidden shadow animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
+      <div className="bg-white ml-[250px] mt-20 h-[640] rounded sm:rounded w-full sm:max-w-2xl overflow-hidden shadow animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
         {/* Header */}
-        <div className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 p-5 sm:p-6 text-white flex justify-between items-center">
+        <div className="bg-gradient-to-r  from-indigo-600 via-violet-600 to-purple-600 p-5 sm:p-6 text-white flex justify-between items-center">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold">User Details</h2>
             <p className="text-white/70 text-sm mt-0.5">Full profile information</p>
@@ -268,8 +269,8 @@ function UserModal({
                         {course.title}
                       </h5>
                       <div className="flex items-center gap-1.5 text-sm flex-shrink-0">
-                        <span className="line-through text-gray-400 text-xs">${course.price}</span>
-                        <span className="font-bold text-emerald-600">${course.discountedPrice}</span>
+                        <span className="line-through text-gray-400 text-xs">${course.discountedPrice}</span>
+                        <span className="font-bold text-emerald-600">${course.price}</span>
                       </div>
                     </div>
                     <div className="text-xs text-gray-400 flex items-center gap-1">
