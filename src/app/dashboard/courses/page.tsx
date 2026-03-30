@@ -468,7 +468,9 @@ export default function CoursesAdminPage() {
       published: false,
       tags: [],
       createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString(),
+          actual_price: 0 // ✅ ADD THIS
+
     });
     setFormOpen(true);
   }
@@ -957,9 +959,11 @@ export default function CoursesAdminPage() {
                   className="group bg-white rounded border border-slate-200 overflow-hidden shadow-sm  transition-all duration-300"
                 >
                   <div className="relative">
-                    <span className="text-sm bg-red-600 text-white p-1 m-1 absolute right-0 z-50 rounded">
-                      {parseInt(c.discountedPrice)}%
-                    </span>
+                    {c.discountedPrice && (
+                      <span className="text-sm bg-red-600 text-white p-1 m-1 absolute right-0 z-50 rounded">
+                        {parseInt(String(c.discountedPrice))}%
+                      </span>
+                    )}
                   </div>
                   {/* Course Image */}
                   <div className="relative h-48 overflow-hidden">
