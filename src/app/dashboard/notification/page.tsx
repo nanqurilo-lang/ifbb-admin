@@ -267,7 +267,7 @@ const NotificationPage = () => {
         {/* Detail Modal */}
         {selectedInquiry && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white rounded max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded max-w-2xl ml-30 mt-25 w-full max-h-[95vh] overflow-y-auto">
               <div className={`h-1 ${getStatusColor(selectedInquiry.status).split(' ')[0]}`} />
               <div className="p-6">
                 <div className="flex items-start justify-between mb-6">
