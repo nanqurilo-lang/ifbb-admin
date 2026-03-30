@@ -248,7 +248,7 @@ const NotificationPage = () => {
         {selectedInquiry && (
           <div className="fixed inset-0 z-50 bg-black/50 p-3 sm:p-4">
             <div className="flex min-h-full items-center justify-center">
-              <div className="max-h-[92vh] w-full max-w-2xl mt-18 overflow-y-auto rounded-xl bg-white shadow-2xl">
+              <div className="max-h-[92vh] w-full max-w-2xl mt-18 ml-50 overflow-y-auto rounded-xl bg-white shadow-2xl">
                 <div className={`h-1 ${getStatusColor(selectedInquiry.status).split(' ')[0]}`} />
                 <div className="p-4 sm:p-6">
                   <div className="mb-6 flex items-start justify-between gap-4">
