@@ -1362,13 +1362,13 @@ export default function CoursesAdminPage() {
       {/* ---------- Module Form Modal (Updated with multiple files support) ---------- */}
       {moduleFormOpen && editingModule && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModuleForm} />
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm " onClick={closeModuleForm} />
           <form
             onSubmit={submitModuleForm}
-            className="relative z-50 w-full max-w-2xl bg-white rounded shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
+            className="relative z-50 w-full max-w-2xl bg-white rounded ml-50 shadow-2xl mt-20 overflow-hidden max-h-[85vh]  "
           >
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white sticky top-0">
-              <div className="flex items-center justify-between">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white sticky top-0  ">
+              <div className="flex items-center justify-between ">
                 <h2 className="text-xl font-bold">
                   {editingModule._id ? "Edit Module" : "Add New Module"}
                 </h2>
@@ -1384,7 +1384,7 @@ export default function CoursesAdminPage() {
               </div>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 overflow-y-auto max-h-[65vh]">
               <div className="space-y-6">
                 {/* Error Message */}
                 {moduleError && (
@@ -1597,9 +1597,9 @@ export default function CoursesAdminPage() {
 
       {/* ---------- View Modal (Updated to show multiple files) ---------- */}
       {selectedCourse && (
-        <div className="fixed inset-0 ml-[400px] z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 mt-30 h-[550]  ml-[280px] z-50 flex items-center justify-center p-6">
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedCourse(null)} />
-          <div className="relative z-50 max-w-6xl w-full bg-white rounded shadow-2xl overflow-hidden max-h-[90vh]">
+          <div className="relative z-50 max-w-6xl w-full bg-white rounded shadow-2xl overflow-hidden max-h-[95vh]">
             <div className="relative h-64 bg-gradient-to-r from-indigo-500 to-purple-600">
               <img
                 src={selectedCourse.courseThumbnail || PLACEHOLDER}
