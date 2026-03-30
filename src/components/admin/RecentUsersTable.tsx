@@ -171,7 +171,7 @@ function UserModal({
       className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-0 sm:p-4"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="bg-white rounded h-[790px] sm:rounded w-full sm:max-w-2xl overflow-hidden shadow animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
+      <div className="bg-white rounded h-[700px] mt-35 ml-50 sm:rounded w-full sm:max-w-2xl overflow-hidden shadow animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
         {/* Header */}
         <div className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 p-5 sm:p-6 text-white flex justify-between items-center">
           <div>
@@ -288,7 +288,7 @@ function UserModal({
         <div className="border-t border-gray-100 p-4 bg-gray-50 flex justify-end gap-2">
           <button
             onClick={onClose}
-            className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded font-semibold hover:bg-gray-200 transition text-sm"
+            className="px-5 py-2.5 bg-gray-100 text-gray-600  rounded font-semibold hover:bg-gray-200 transition text-sm"
           >
             Close
           </button>
