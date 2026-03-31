@@ -671,12 +671,12 @@ export default function GalleryPage() {
       {showImageModal && selectedImage && (
         <div className="fixed inset-0 z-50 ml-50 flex items-center justify-center p-4">
           <div className="fixed inset-0 bg-black/80" onClick={handleCloseImageModal} />
-          <div className="relative z-50 max-w-4xl w-full bg-white rounded shadow-2xl overflow-hidden max-h-[90vh]">
+          <div className="relative z-50 max-w-4xl w-full bg-white rounded shadow-2xl overflow-auto mt-25 max-h-[85vh]">
             <div className="relative">
               <img
                 src={selectedImage.imageUrl}
                 alt={`Gallery image ${selectedImage._id}`}
-                className="w-full h-auto max-h-[60vh] object-contain"
+                className="w-full h-auto mt-4 max-h-[60vh] object-contain"
               />
               <button
                 onClick={handleCloseImageModal}
