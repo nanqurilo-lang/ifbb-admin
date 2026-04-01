@@ -218,7 +218,7 @@ function UserModal({
               ) : (
                 <span className="inline-flex items-center gap-2 px-3 py-2 bg-red-50 text-red-600 font-semibold rounded border border-red-200 text-sm">
                   <XCircle className="w-4 h-4" />
-                  Offline Account
+                  Inactive Account
                 </span>
               )}
             </div>

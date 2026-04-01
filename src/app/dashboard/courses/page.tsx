@@ -469,7 +469,7 @@ export default function CoursesAdminPage() {
       tags: [],
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-          actual_price: 0 // ✅ ADD THIS
+      actual_price: 0 // ✅ ADD THIS
 
     });
     setFormOpen(true);
@@ -1599,8 +1599,8 @@ export default function CoursesAdminPage() {
       {selectedCourse && (
         <div className="fixed inset-0 mt-30 h-[550]  ml-[280px] z-50 flex items-center justify-center p-6">
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedCourse(null)} />
-          <div className="relative z-50 max-w-6xl w-full bg-white rounded shadow-2xl overflow-hidden max-h-[95vh]">
-            <div className="relative h-64 bg-gradient-to-r from-indigo-500 to-purple-600">
+          <div className="relative z-50 max-w-4xl h-[600] w-full bg-white rounded shadow-2xl overflow-hidden max-h-[90vh]">
+            <div className="relative h-45 bg-gradient-to-r from-indigo-500 to-purple-600">
               <img
                 src={selectedCourse.courseThumbnail || PLACEHOLDER}
                 alt={selectedCourse.title}
@@ -1730,12 +1730,29 @@ export default function CoursesAdminPage() {
                   <div className="bg-slate-50 rounded p-5">
                     <h3 className="text-lg font-semibold text-slate-900 mb-4">Course Information</h3>
                     <div className="space-y-2">
-                      <div>
+                      {/* <div>
                         <div className="text-sm text-slate-500">Price</div>
                         <div className="text-xl font-bold text-slate-900">${formatPrice(selectedCourse.price)}</div>
                         {selectedCourse.discountedPrice && (
                           <div className="text-sm text-slate-400 line-through mt-1">
                             ${formatPrice(selectedCourse.discountedPrice)}
+                          </div>
+                        )}
+                      </div> */}
+
+
+
+
+                      <div>
+                        <div className="text-sm text-slate-500">Price</div>
+                        <div className="flex items-center  gap-4">
+                          <div className="text-xl line-through  text-slate-900">${formatPrice(selectedCourse.price)}</div>
+                          <div className="text-xl  font-bold text-slate-900">${formatPrice(selectedCourse.actual_price)}</div>
+                        </div>
+
+                        {selectedCourse.discountedPrice && (
+                          <div className="text-sm absolute top-2 bg-green-600  text-white p-1 left-3 rounded mt-1">
+                            {formatPrice(selectedCourse.discountedPrice)}%
                           </div>
                         )}
                       </div>
