@@ -1746,8 +1746,8 @@ export default function CoursesAdminPage() {
                       <div>
                         <div className="text-sm text-slate-500">Price</div>
                         <div className="flex items-center  gap-4">
-                          <div className="text-xl line-through  text-slate-900">${formatPrice(selectedCourse.price)}</div>
-                          <div className="text-xl  font-bold text-slate-900">${formatPrice(selectedCourse.actual_price)}</div>
+                          <div className="text-xl  line-through text-slate-400">${formatPrice(selectedCourse.price)}</div>
+                          <div className="text-xl    font-bold text-slate-900">${formatPrice(selectedCourse.actual_price)}</div>
                         </div>
 
                         {selectedCourse.discountedPrice && (
