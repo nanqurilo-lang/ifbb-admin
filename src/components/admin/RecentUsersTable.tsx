@@ -503,7 +503,7 @@ export default function UsersList() {
 
             {/* Filter Tabs */}
             <div className="flex gap-2 flex-wrap">
-              {(["all", "Active", "Offline"] as FilterType[]).map((f) => (
+              {(["all", "Active", "Inactive"] as FilterType[]).map((f) => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
