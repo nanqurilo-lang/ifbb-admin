@@ -600,7 +600,7 @@ export default function UsersList() {
                           ) : (
                             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-50 text-red-600 rounded-full text-xs font-bold border border-red-100">
                               <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
-                              Offline
+                              Inactive
                             </span>
                           )}
                         </td>
