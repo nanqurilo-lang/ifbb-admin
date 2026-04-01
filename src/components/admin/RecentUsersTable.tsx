@@ -477,7 +477,7 @@ export default function UsersList() {
           {/* Offline */}
           <div className="bg-white rounded shadow-sm border border-gray-100 p-5 hover:shadow-md transition-shadow duration-200">
             <div className="flex items-center justify-between mb-4">
-              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Offline</p>
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Inactive</p>
               <div className="p-2.5 bg-red-50 rounded">
                 <XCircle className="w-5 h-5 text-red-500" />
               </div>
@@ -517,7 +517,7 @@ export default function UsersList() {
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
                 >
-                  {f === "all" ? "All Users" : f === "Active" ? "✓ Active" : "✕ Offline"}
+                  {f === "all" ? "All Users" : f === "Active" ? "✓ Active" : "✕ Inactive"}
                 </button>
               ))}
             </div>
