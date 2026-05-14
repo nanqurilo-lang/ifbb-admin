@@ -171,7 +171,7 @@ function UserModal({
       className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center z-50 p-0 sm:p-4"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="bg-white rounded h-[700px] mt-35 ml-50 sm:rounded w-full sm:max-w-2xl overflow-hidden shadow animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
+      <div className="bg-white rounded h-[82%] mt-18 ml-50 sm:rounded w-full sm:max-w-2xl overflow-hidden shadow animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
         {/* Header */}
         <div className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 p-5 sm:p-6 text-white flex justify-between items-center">
           <div>
@@ -187,7 +187,7 @@ function UserModal({
           </button>
         </div>
 
-        <div className="p-4 sm:p-6 space-y-4 max-h-[70vh] sm:max-h-[65vh] overflow-y-auto">
+        <div className="p-4 sm:p-6 space-y-4 max-h-[70vh] sm:max-h-[55vh] overflow-y-auto">
           {/* User Info Card */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 sm:p-5 bg-gradient-to-br from-slate-50 to-gray-100 rounded border border-gray-200">
             <img
@@ -285,7 +285,7 @@ function UserModal({
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-100 p-4 bg-gray-50 flex justify-end gap-2">
+        <div className="border-t border-gray-100 p-4 bg-white flex justify-end gap-2">
           <button
             onClick={onClose}
             className="px-5 py-2.5 bg-gray-100 text-gray-600  rounded font-semibold hover:bg-gray-200 transition text-sm"

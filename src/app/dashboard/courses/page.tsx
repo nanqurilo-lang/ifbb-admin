@@ -1597,9 +1597,9 @@ export default function CoursesAdminPage() {
 
       {/* ---------- View Modal (Updated to show multiple files) ---------- */}
       {selectedCourse && (
-        <div className="fixed inset-0 mt-30 h-[550]  ml-[280px] z-50 flex items-center justify-center p-6">
+        <div className="fixed inset-0 mt-38 h-[500px] ml-[280px] z-50 flex items-center justify-center p-6">
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedCourse(null)} />
-          <div className="relative z-50 max-w-4xl h-[600] w-full bg-white rounded shadow-2xl overflow-hidden max-h-[90vh]">
+          <div className="relative z-50 max-w-4xl w-full bg-white rounded shadow-2xl overflow-hidden max-h-[90vh]">
             <div className="relative h-45 bg-gradient-to-r from-indigo-500 to-purple-600">
               <img
                 src={selectedCourse.courseThumbnail || PLACEHOLDER}
@@ -1629,7 +1629,7 @@ export default function CoursesAdminPage() {
               </div>
             </div>
 
-            <div className="p-6 overflow-y-auto max-h-[60vh]">
+            <div className="p-6 overflow-y-auto max-h-[50vh]">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Course Details */}
                 <div className="md:col-span-2">
